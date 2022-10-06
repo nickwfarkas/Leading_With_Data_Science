@@ -85,5 +85,12 @@ problem3c(iris)
 problem4()
 
 
+# Problem 6
+
+#a 
+
+xor(c(0,1,0,1,0,1,0,1,0,1), 0100011000
+)
+
 
 

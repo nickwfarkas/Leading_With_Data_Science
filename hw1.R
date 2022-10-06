@@ -33,9 +33,57 @@ problem3c <- function(data){
   )
 }
 
+d1 <- function(s){
+  (1-s)/s
+}
+
+d2 <- function(s){
+  -log(s)
+}
+
+problem4 <- function(){
+  curve(d1, col = 1)
+  curve(d2, col = 2, add = TRUE)
+}
+
+# d1 and d2 become more similar ad s -> infinity
+
+#
+#The value of logm/df will be the maximum value 
+#The value of logm/df will be 0
+
+#Problem 6
+#a
+x <- c(0,1,0,1,0,1,0,1,0,1)
+y <- c(0,1,0,0,0,1,1,0,0,0)
+hamming.distance <- sum(xor(x, y))
+jaccard.distance <- sum(!xor(x, y))
+
+SMC <- function(x,y){
+  hamming.distance <- sum(xor(x, y))
+  length(x) - hamming.distance
+}
+
+#b
+SMC(x,y)
+
+#c
+# The equations are similar Cosine measure just takes only unique values while jaccard takes the whole sample
+
+
+# Problem 7
+
+cosine <- function(x,y){
+  sum(x*y)/length(x)
+}
+cor(x,y)
+euclidean.distance <- function(x, y) sqrt(sum((x - y)^2))
+
 problem3a(iris)
 problem3b(iris)
 problem3c(iris)
+problem4()
+
 
 
 
